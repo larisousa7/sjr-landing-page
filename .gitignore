@@ -1,0 +1,12 @@
+# Raw/source video — exceeds GitHub's 100MB file limit; the optimized
+# assets/video/vsl-web.mp4 (the one actually used by the page) is kept.
+VSL 1.05x.mp4
+assets/video/vsl.mp4
+
+# Local dev-tool config
+.claude/
+
+# Local QA artifacts — not part of the deliverable
+temporary screenshots/
+.chrome-profile-*/
+*.output

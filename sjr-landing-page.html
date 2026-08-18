@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Investment for Tradies & FIFO Workers | SJR Property Group</title>
+<meta name="description" content="SJR Property Group helps Australian tradies and FIFO workers develop a strategic approach to property investing, identify suitable opportunities and build their portfolios over time.">
+<meta property="og:title" content="Property Investment for Tradies & FIFO Workers | SJR Property Group">
+<meta property="og:description" content="SJR Property Group helps Australian tradies and FIFO workers develop a strategic approach to property investing, identify suitable opportunities and build their portfolios over time.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/video/vsl-poster.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!--
+  ANALYTICS PLACEHOLDERS — do not ship with fake IDs.
+  Insert real IDs before launch:
+    - Google Tag Manager: standard GTM head/body snippet, container ID GTM-XXXXXXX
+    - Meta Pixel: fbq('init','PIXEL_ID'); fbq('track','PageView');
+    - GA4: gtag('config','G-XXXXXXX');
+  page_view fires automatically once GTM/GA is installed above.
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F33;
+    --navy-2:#142E4A;
+    --charcoal:#151A1F;
+    --charcoal-2:#1E252C;
+    --blue:#1769AA;
+    --blue-dim:#0E4A75;
+    --paper:#F5F3EE;
+    --paper-2:#ECE7DA;
+    --amber:#FFB400;
+    --amber-dim:#8A6300;
+    --grey:#D9DDE1;
+    --concrete:#93A0AC;
+    --body-ink:#2B333B;
+    --line-dark:rgba(255,255,255,0.14);
+    --line-light:rgba(11,31,51,0.13);
+    --radius:2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--body-ink);
+    font-family:'Inter',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:0;
+  }
+  h1,h2,h3,.display{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    line-height:1.08;
+    margin:0;
+  }
+  .mono{
+    font-family:'IBM Plex Mono',monospace;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+  section{position:relative;}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:2px;}
+
+  /* ---- Blueprint grid backdrop ---- */
+  .blueprint-bg{
+    background-color:var(--navy);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+    background-size:40px 40px;
+  }
+  .blueprint-corner{position:absolute; width:26px; height:26px; pointer-events:none;}
+  .blueprint-corner.tl{top:14px;left:14px;border-top:2px solid var(--amber);border-left:2px solid var(--amber);}
+  .blueprint-corner.tr{top:14px;right:14px;border-top:2px solid var(--amber);border-right:2px solid var(--amber);}
+  .blueprint-corner.bl{bottom:14px;left:14px;border-bottom:2px solid var(--amber);border-left:2px solid var(--amber);}
+  .blueprint-corner.br{bottom:14px;right:14px;border-bottom:2px solid var(--amber);border-right:2px solid var(--amber);}
+
+  .sheet-tag{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:var(--amber); margin-bottom:14px;}
+  .sheet-tag::before{content:"";width:18px;height:1px;background:var(--amber);display:inline-block;}
+  .sheet-tag.on-light{color:var(--blue);}
+  .sheet-tag.on-light::before{background:var(--blue);}
+
+  /* ---- Buttons ---- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:10px;
+    font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.03em;
+    font-size:15px; font-weight:600;
+    padding:16px 30px;
+    border-radius:var(--radius);
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--amber); color:var(--navy);}
+  .btn-primary:hover{background:#ffc333;}
+  .btn-outline{background:transparent;border-color:rgba(255,255,255,0.4);color:#fff;}
+  .btn-outline:hover{border-color:var(--amber); color:var(--amber);}
+  .btn-navy{background:var(--navy); color:var(--paper);}
+  .btn-navy:hover{background:#081522;}
+  .btn-block{width:100%;}
+  .microline{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.04em;
+    color:var(--concrete); margin-top:10px;
+  }
+  @media (prefers-reduced-motion:reduce){ .btn:hover{transform:none;} }
+
+  /* ---- Nav ---- */
+  .nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,31,51,0.97);
+    border-bottom:1px solid var(--line-dark);
+    backdrop-filter:blur(6px);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px; gap:24px;}
+  .logo{display:flex;align-items:center;}
+  .logo img{height:42px;width:auto;display:block;}
+  .nav-right{display:flex;align-items:center;gap:18px;}
+  .nav .btn{padding:11px 20px;font-size:13px;}
+
+  /* ---- Hero ---- */
+  .hero{color:#fff; padding:64px 0 0;}
+  .hero-grid{display:grid; grid-template-columns:1fr; gap:0;}
+  .hero-eyebrow{color:var(--amber);font-size:13px;margin-bottom:18px;}
+  .hero h1{font-size:clamp(30px,4.6vw,50px); color:#fff; text-transform:none; letter-spacing:-0.01em;}
+  .hero-sub{max-width:560px;color:#D8DEE4;font-size:18px;margin:20px auto 0;}
+  .hero-credibility{max-width:560px;color:#AEB9C4;font-size:15px;margin:16px auto 0; padding-top:16px; border-top:1px solid var(--line-dark);}
+  .hero-credibility strong{color:#fff;}
+  .hero-actions{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px;}
+  .hero-copy{text-align:center;}
+
+  /* hero video */
+  .hero-video{
+    position:relative; border-radius:var(--radius); overflow:hidden;
+    aspect-ratio:16/9; background:#000; max-width:900px; margin:22px auto 0;
+    box-shadow:0 30px 70px -22px rgba(0,0,0,0.65);
+  }
+  .hero-video img.poster{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero-video video{width:100%;height:100%;object-fit:cover;display:block;background:#000;}
+  .hero-video::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.05) 42%, rgba(0,0,0,0.35) 100%);
+    pointer-events:none;
+  }
+  .hero-video.playing::after,
+  .hero-video.playing .video-bar,
+  .hero-video.playing .video-caption,
+  .hero-video.playing .play-btn{display:none;}
+  .video-bar{
+    position:absolute; top:0; left:0; right:0; z-index:2;
+    background:var(--amber); color:var(--navy);
+    font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.03em;
+    font-size:13px; font-weight:600; text-align:center; padding:12px 14px;
+  }
+  .play-btn{
+    position:absolute; z-index:2; inset:0; margin:auto; width:74px; height:74px; border-radius:50%;
+    background:var(--amber); border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 30px -6px rgba(255,180,0,0.55);
+    transition:transform .15s ease;
+  }
+  .play-btn:hover{transform:scale(1.06);}
+  .play-btn svg{margin-left:4px;}
+  .video-caption{position:absolute; z-index:2; left:16px; right:16px; bottom:16px; color:#fff; font-size:13px;}
+  .video-caption strong{display:block; font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:15px; margin-bottom:2px;}
+
+  /* stat strip */
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; margin-top:52px; background:var(--line-dark); border-top:1px solid var(--line-dark);}
+  .stat{background:var(--navy); padding:24px 18px; text-align:left;}
+  .stat .num{font-family:'Oswald',sans-serif; font-size:clamp(24px,3.6vw,36px); color:var(--amber);}
+  .stat .lab{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--concrete); margin-top:6px;}
+  @media (max-width:760px){ .stats{grid-template-columns:repeat(2,1fr);} }
+  .stat-note{background:var(--navy); text-align:center; padding:10px 18px 26px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--concrete);}
+
+  /* featured strip */
+  .featured{background:var(--navy-2); padding:18px 0; border-top:1px solid var(--line-dark); border-bottom:1px solid var(--line-dark);}
+  .featured .wrap{display:flex; align-items:center; gap:18px; flex-wrap:wrap; color:var(--concrete); font-size:14px;}
+  .featured a{color:var(--amber); border-bottom:1px solid var(--amber-dim);}
+
+  /* ---- Section shells ---- */
+  .section-light{padding:80px 0;}
+  .section-dark{padding:80px 0; background:var(--charcoal); color:#fff;}
+  .section-head{max-width:660px; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(24px,3.4vw,36px); color:var(--navy); text-transform:none; letter-spacing:-0.01em;}
+  .section-head p{margin-top:14px;font-size:16.5px;color:#4B5158;}
+  .section-dark .section-head h2{color:#fff;}
+  .section-dark .section-head p{color:var(--concrete);}
+
+  /* problem list */
+  .problem-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 40px;}
+  .problem-item{display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--line-light);}
+  .problem-item .mark{font-family:'IBM Plex Mono',monospace; color:var(--blue); font-size:13px; flex:none; padding-top:2px;}
+  .problem-item p{margin:0; font-size:15.5px; color:var(--body-ink);}
+  @media (max-width:760px){ .problem-grid{grid-template-columns:1fr;} }
+
+  /* mechanism (what SJR does) */
+  .mech-list{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line-dark);}
+  .mech-item{background:var(--charcoal); padding:28px 26px;}
+  .mech-item .idx{font-family:'IBM Plex Mono',monospace; color:var(--amber); font-size:13px; margin-bottom:10px;}
+  .mech-item p{margin:0; font-size:15px; color:#D8DEE4;}
+  @media (max-width:900px){ .mech-list{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:900px) and (min-width:601px){ .mech-item:last-child{grid-column:1/-1;} }
+  @media (max-width:600px){ .mech-list{grid-template-columns:1fr;} }
+  .mech-note{margin-top:26px; max-width:680px; font-size:14.5px; color:var(--concrete);}
+
+  /* what you get */
+  .get-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line-light);}
+  .get-card{background:var(--paper); padding:32px;}
+  .get-card .idx{font-family:'IBM Plex Mono',monospace;color:var(--blue);font-size:13px;margin-bottom:14px;}
+  .get-card h3{font-size:19px; color:var(--navy); text-transform:none; letter-spacing:0; font-family:'Inter',sans-serif; font-weight:700;}
+  .get-card p{color:#4B5158; margin-top:10px; font-size:15px;}
+  @media (max-width:760px){ .get-grid{grid-template-columns:1fr;} }
+  .get-bonus{margin-top:24px; font-size:15px; color:#4B5158;}
+  .get-bonus strong{color:var(--navy);}
+
+  /* story / timeline */
+  .story{background:var(--navy); color:#fff; padding:80px 0;}
+  .story-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:start;}
+  .story-photo{width:100%; aspect-ratio:4/5; border:1px solid var(--line-dark); overflow:hidden; position:relative;}
+  .story-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .story-photo .name-tag{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top, rgba(11,31,51,0.92), transparent); padding:34px 16px 14px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--concrete);}
+  .story-photo .name-tag strong{display:block; color:#fff; font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:14px; margin-bottom:2px;}
+  .story h2{color:#fff;font-size:clamp(24px,3.2vw,34px); text-transform:none; letter-spacing:-0.01em;}
+  .story p{color:#C7CDD3; font-size:16px; margin-top:16px;}
+  .timeline{display:flex; align-items:center; flex-wrap:wrap; gap:0; margin:26px 0; border:1px solid var(--line-dark); padding:20px;}
+  .timeline .tl-stop{text-align:center; padding:0 18px;}
+  .timeline .tl-stop .num{font-family:'Oswald',sans-serif; font-size:26px; color:var(--amber);}
+  .timeline .tl-stop .lab{font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--concrete); margin-top:4px; max-width:110px;}
+  .timeline .tl-arrow{color:var(--concrete); font-size:18px; flex:none;}
+  @media (max-width:800px){ .story-grid{grid-template-columns:1fr;} .timeline{justify-content:center;} }
+
+  /* how it works */
+  .process-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:16px;}
+  .process-card{background:#fff; border:1px solid var(--line-light); padding:24px 20px;}
+  .process-card .idx{font-family:'Oswald',sans-serif; font-size:28px; color:var(--blue);}
+  .process-card h3{margin-top:10px; font-size:15.5px; color:var(--navy); text-transform:uppercase; letter-spacing:0.02em;}
+  .process-card p{margin-top:8px; font-size:14px; color:#4B5158;}
+  @media (max-width:960px){ .process-grid{grid-template-columns:repeat(3,1fr);} }
+  @media (max-width:640px){ .process-grid{grid-template-columns:1fr 1fr;} }
+
+  /* guarantee band */
+  .guarantee{background:var(--amber); color:var(--navy); padding:52px 0;}
+  .guarantee-inner{display:flex; align-items:center; gap:34px; flex-wrap:wrap; justify-content:space-between;}
+  .guarantee h2{font-size:clamp(22px,3.2vw,32px); max-width:640px; text-transform:none; letter-spacing:-0.01em;}
+  .guarantee .fine{margin-top:10px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--amber-dim);}
+  .guarantee .badge{font-family:'IBM Plex Mono',monospace; font-size:13px; text-align:center; border:2px solid var(--navy); padding:16px 22px; white-space:nowrap;}
+  .guarantee .badge b{display:block;font-family:'Oswald',sans-serif;font-size:26px;}
+
+  /* proof grid (real photos) */
+  .proof-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .proof-card{border:1px solid var(--line-light); background:#fff; overflow:hidden; box-shadow:0 1px 2px rgba(11,31,51,0.05); transition:transform .18s ease, box-shadow .18s ease;}
+  .proof-card:hover{transform:translateY(-4px); box-shadow:0 16px 28px -14px rgba(11,31,51,0.3);}
+  .proof-card img{width:100%; aspect-ratio:557/635; object-fit:cover; display:block;}
+  @media (max-width:900px){ .proof-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .proof-grid{grid-template-columns:1fr;} }
+  @media (prefers-reduced-motion:reduce){ .proof-card:hover{transform:none;} }
+  .proof-note{margin-top:14px; font-size:13px; color:var(--concrete);}
+
+  /* client result / testimonial cards */
+  .result-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  .result-card{background:var(--navy); border:1px solid var(--line-dark); padding:26px;}
+  .result-card .fields{display:flex; flex-wrap:wrap; gap:8px 16px; font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--concrete); margin-bottom:16px; padding-bottom:16px; border-bottom:1px solid var(--line-dark);}
+  .result-card .fields span b{color:var(--amber); display:block; font-size:11px; margin-bottom:2px;}
+  .result-card .quote{font-family:'Oswald',sans-serif;text-transform:none;letter-spacing:0;font-size:16.5px;line-height:1.4;color:#fff;}
+  .result-card .who{margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--amber);}
+  .placeholder-flag{display:inline-block; margin-bottom:14px; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.05em; color:var(--amber); border:1px solid var(--amber-dim); padding:3px 8px;}
+  @media (max-width:900px){ .result-grid{grid-template-columns:1fr;} }
+
+  /* why sjr */
+  .why-grid{display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line-light);}
+  .why-card{background:var(--paper); padding:28px 30px;}
+  .why-card h3{font-size:17px; color:var(--navy); text-transform:none; letter-spacing:0; font-family:'Inter',sans-serif; font-weight:700;}
+  .why-card p{color:#4B5158; margin-top:8px; font-size:14.5px;}
+  .why-card:last-child{grid-column:1/-1;}
+  @media (max-width:760px){ .why-grid{grid-template-columns:1fr;} .why-card:last-child{grid-column:auto;} }
+
+  /* who this is for */
+  .who-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .who-col h3{font-size:14px; color:var(--navy); font-family:'IBM Plex Mono',monospace; letter-spacing:0.05em; margin-bottom:16px;}
+  .who-col ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;}
+  .who-col li{display:flex; gap:10px; font-size:15px; color:var(--body-ink);}
+  .who-col.yes li::before{content:"✓"; color:var(--blue); font-weight:700; flex:none;}
+  .who-col.no li::before{content:"–"; color:#8B95A0; font-weight:700; flex:none;}
+  @media (max-width:700px){ .who-grid{grid-template-columns:1fr; gap:30px;} }
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--line-light);}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:0; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:20px;
+    padding:20px 2px; font-family:'Inter',sans-serif; font-weight:700; font-size:16px; color:var(--navy);
+  }
+  .faq-q .plus{font-family:'IBM Plex Mono',monospace;color:var(--blue);font-size:20px;flex:none;transition:transform .2s ease;}
+  .faq-item[data-open="true"] .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a p{padding:0 2px 22px; color:#4B5158; font-size:15px; max-width:680px;}
+  .faq-a p.tbd{color:var(--amber-dim); font-style:italic;}
+
+  /* final CTA */
+  .final-cta{color:#fff; padding:88px 0;}
+  .final-cta h2{font-size:clamp(26px,4vw,42px); color:#fff; text-transform:none; letter-spacing:-0.01em;}
+  .cta-grid{display:grid; grid-template-columns:1fr 0.92fr; gap:64px; align-items:start;}
+  .cta-copy p{color:#C7CDD3;max-width:460px;margin:18px 0 0;font-size:17px;}
+  .cta-phone-alt{margin-top:26px; font-size:14.5px; color:var(--concrete);}
+  .cta-phone-alt a{color:#fff; border-bottom:1px solid var(--amber-dim);}
+  .cta-phone-alt a:hover{color:var(--amber);}
+  .cta-form-card{background:var(--paper); color:var(--navy); border-radius:var(--radius); padding:28px 26px 20px; box-shadow:0 30px 60px -20px rgba(0,0,0,0.5);}
+  .cta-form-card .kicker{font-family:'Oswald',sans-serif; text-transform:uppercase; font-size:18px; letter-spacing:0.01em; color:var(--navy); margin-bottom:4px;}
+  .cta-form-card .kicker-sub{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--blue); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:18px; display:block;}
+  .cta-form-card iframe{display:block; width:100%; border:none;}
+  @media (max-width:860px){ .cta-grid{grid-template-columns:1fr; gap:40px;} }
+
+  /* footer */
+  footer{background:var(--charcoal); color:var(--concrete); padding:52px 0 26px; font-size:14px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; padding-bottom:32px; border-bottom:1px solid var(--line-dark);}
+  .foot-grid h4{font-family:'IBM Plex Mono',monospace; color:#fff; font-size:12px; text-transform:uppercase; letter-spacing:0.06em; margin:0 0 14px;}
+  .foot-grid a{display:block; color:var(--concrete); margin-bottom:8px;}
+  .foot-grid a:hover{color:var(--amber);}
+  .foot-logo img{height:32px;width:auto;display:block;margin-bottom:14px;}
+  .foot-disclaimer{padding-top:24px; font-size:12px; line-height:1.6; color:#7A8590; max-width:900px;}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:20px;font-size:12px;}
+  @media (max-width:760px){ .foot-grid{grid-template-columns:1fr 1fr;} }
+
+  /* sticky mobile cta */
+  .mobile-cta-bar{display:none;}
+  @media (max-width:760px){
+    .mobile-cta-bar{
+      display:block; position:fixed; left:0; right:0; bottom:0; z-index:60;
+      background:var(--amber); padding:12px 16px; text-align:center;
+      box-shadow:0 -8px 20px rgba(0,0,0,0.18);
+    }
+    .mobile-cta-bar a{
+      display:block; font-family:'Oswald',sans-serif; text-transform:uppercase; letter-spacing:0.03em;
+      font-weight:700; font-size:14.5px; color:var(--navy);
+    }
+    body{padding-bottom:60px;}
+  }
+
+  .reveal{opacity:0; transform:translateY(14px); animation:rise .6s ease forwards;}
+  .reveal.d1{animation-delay:.08s;} .reveal.d2{animation-delay:.16s;} .reveal.d3{animation-delay:.24s;}
+  @keyframes rise{to{opacity:1; transform:translateY(0);}}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{animation:none; opacity:1; transform:none;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#top" aria-label="SJR Property Group — Buyers Agency"><img src="assets/logo-white.png" alt="SJR Property Group — Buyers Agency"></a>
+    <div class="nav-right">
+      <a class="btn btn-primary" href="#cta-form" data-cta="strategy-call">Book My Free Strategy Call →</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="top" class="hero blueprint-bg">
+  <span class="blueprint-corner tl"></span>
+  <span class="blueprint-corner tr"></span>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="reveal hero-copy">
+        <div class="hero-eyebrow mono">For tradies &amp; FIFO workers</div>
+        <h1>I help tradies buy their first (or next) investment property without the guesswork.</h1>
+        <p class="hero-sub">Build a property investment strategy around your actual financial position — then identify and acquire properties that fit the plan.</p>
+        <p class="hero-credibility"><strong>Mitch built a $6.5M property portfolio in 5 years.</strong> Now SJR helps tradies and FIFO workers apply a strategic approach to property investing.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#cta-form" data-cta="strategy-call">Book My Free Strategy Call →</a>
+        </div>
+        <div class="microline">20 minutes chat to find out what's possible for your situation</div>
+      </div>
+
+      <div class="reveal d1">
+        <div class="hero-video" id="heroVideo">
+          <img class="poster" src="assets/video/vsl-poster.jpg" alt="Mitch, founder of SJR Property Group, talking through how the strategy works">
+          <div class="video-bar">▶ Watch: how the strategy actually works (3 min)</div>
+          <button class="play-btn" id="playVsl" aria-label="Play video">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M6 4l14 8-14 8V4z" fill="#0B1F33"/></svg>
+          </button>
+          <div class="video-caption"><strong>Mitch Radley</strong>Founder, SJR Property Group</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats reveal d2">
+    <div class="wrap" style="display:contents;">
+      <div class="stat"><div class="num">$6.5M</div><div class="lab">Personal property portfolio</div></div>
+      <div class="stat"><div class="num">49</div><div class="lab">Properties purchased</div></div>
+      <div class="stat"><div class="num">87%</div><div class="lab">Purchased off-market</div></div>
+      <div class="stat"><div class="num">4 clients/month</div><div class="lab">Exclusive service</div></div>
+    </div>
+  </div>
+  <div class="stat-note">New client places are intentionally limited each month — see “Why SJR” below.</div>
+</section>
+
+<div class="featured">
+  <div class="wrap">
+    <span class="mono" style="color:#fff;">As featured in</span>
+    <a href="https://au.finance.yahoo.com/news/tradie-mates-struggling-to-get-ahead-build-6-million-property-empire-in-five-years-no-help-190052963.html" target="_blank" rel="noopener">Yahoo Finance — "The tradie who swapped the tools for a $6.5M property portfolio" →</a>
+  </div>
+</div>
+
+<!-- THE PROBLEM -->
+<section class="section-light">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">The problem</div>
+      <h2>You're not necessarily earning too little. You may just not have a clear strategy for what to do with it.</h2>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-item"><span class="mark">—</span><p>Long hours and shift or roster patterns that leave little time to research property properly.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>A good income that isn't necessarily converting into long-term wealth.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>Uncertainty around what you could actually borrow, or what it would take to get there.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>Conflicting property advice online, and no easy way to tell who actually knows what they're talking about.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>Not knowing which markets or property types are even worth considering for your situation.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>A real fear of buying the wrong property and being stuck with it.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>Wanting to invest but not knowing where to actually start.</p></div>
+      <div class="problem-item"><span class="mark">—</span><p>Already owning one property, but not knowing how — or whether — to scale from there.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT SJR ACTUALLY DOES -->
+<section id="how-it-works" class="section-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag mono">What SJR actually does</div>
+      <h2>Property investing isn't just about finding a property. It's about having a strategy before you buy.</h2>
+    </div>
+    <div class="mech-list">
+      <div class="mech-item"><div class="idx mono">01</div><p>Understand your current financial position.</p></div>
+      <div class="mech-item"><div class="idx mono">02</div><p>Understand your borrowing capacity and buying power.</p></div>
+      <div class="mech-item"><div class="idx mono">03</div><p>Define what you're actually trying to achieve.</p></div>
+      <div class="mech-item"><div class="idx mono">04</div><p>Develop an acquisition strategy around that goal.</p></div>
+      <div class="mech-item"><div class="idx mono">05</div><p>Identify suitable markets and property types.</p></div>
+      <div class="mech-item"><div class="idx mono">06</div><p>Access off-market opportunities where they fit the strategy.</p></div>
+      <div class="mech-item"><div class="idx mono">07</div><p>Conduct due diligence on the numbers, location and risks.</p></div>
+      <div class="mech-item"><div class="idx mono">08</div><p>Negotiate and assist through the acquisition itself.</p></div>
+      <div class="mech-item"><div class="idx mono">09</div><p>Repeat strategically, when and if it makes sense to.</p></div>
+    </div>
+    <p class="mech-note">Off-market access is one channel used within that process — not the strategy itself. Every property is assessed on whether it fits the plan, not simply because it's off-market.</p>
+  </div>
+</section>
+
+<!-- WHAT YOU GET -->
+<section class="section-light">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">The free strategy call</div>
+      <h2>What you'll get from the free strategy call</h2>
+    </div>
+    <div class="get-grid">
+      <div class="get-card">
+        <div class="idx mono">01</div>
+        <h3>Understand your position</h3>
+        <p>Get clarity around your current financial position and potential borrowing capacity.</p>
+      </div>
+      <div class="get-card">
+        <div class="idx mono">02</div>
+        <h3>Identify your options</h3>
+        <p>Understand what investment approaches may make sense for your goals.</p>
+      </div>
+      <div class="get-card">
+        <div class="idx mono">03</div>
+        <h3>Understand where we'd look</h3>
+        <p>Get an initial view of markets and property types that may fit the strategy.</p>
+      </div>
+      <div class="get-card">
+        <div class="idx mono">04</div>
+        <h3>Know your next step</h3>
+        <p>Whether you're ready now or need to prepare for 6–12 months, leave with a clearer direction.</p>
+      </div>
+    </div>
+    <p class="get-bonus"><strong>Plus:</strong> you'll receive SJR's Tradie's Guide to Property Investing, free, just for booking the call.</p>
+    <div style="margin-top:26px;">
+      <a class="btn btn-navy" href="#cta-form" data-cta="strategy-call">Book My Free Strategy Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- MITCH'S STORY -->
+<section class="story">
+  <div class="wrap story-grid">
+    <div class="reveal">
+      <div class="story-photo">
+        <img src="assets/mitch-founder.jpg" alt="Mitch Radley, founder of SJR Property Group">
+        <span class="name-tag mono"><strong>Mitch Radley</strong>Founder, SJR Property Group</span>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div class="sheet-tag mono">Mitch's story</div>
+      <h2>From his first property at 21 to a $6.5M portfolio.</h2>
+      <div class="timeline">
+        <div class="tl-stop"><div class="num">21</div><div class="lab mono">First property</div></div>
+        <div class="tl-arrow">→</div>
+        <div class="tl-stop"><div class="num" style="font-size:15px;letter-spacing:.03em;">BUILT OVER<br>TIME</div><div class="lab mono">Portfolio growth</div></div>
+        <div class="tl-arrow">→</div>
+        <div class="tl-stop"><div class="num">49</div><div class="lab mono">Properties purchased</div></div>
+        <div class="tl-arrow">→</div>
+        <div class="tl-stop"><div class="num">$6.5M</div><div class="lab mono">Personal portfolio</div></div>
+      </div>
+      <p>The point isn't that everyone should replicate the same number. It's that Mitch has personally gone through the process of acquiring, financing and managing property over time — and now applies that experience when helping clients.</p>
+      <p style="color:var(--concrete); font-size:14px;">Individual results vary and depend on your own financial position, goals and market conditions. Past performance is not indicative of future results.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section-light">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">The process</div>
+      <h2>How it works</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-card"><div class="idx">01</div><h3>Strategy</h3><p>Understand your position, goals and buying capacity.</p></div>
+      <div class="process-card"><div class="idx">02</div><h3>Search</h3><p>Identify properties and markets that fit the strategy.</p></div>
+      <div class="process-card"><div class="idx">03</div><h3>Due diligence</h3><p>Assess the property, the numbers, the location and the risks.</p></div>
+      <div class="process-card"><div class="idx">04</div><h3>Negotiate &amp; acquire</h3><p>Assist through the negotiation and purchasing process.</p></div>
+      <div class="process-card"><div class="idx">05</div><h3>Build</h3><p>When appropriate, repeat the strategy to keep building.</p></div>
+    </div>
+    <div style="margin-top:32px;">
+      <a class="btn btn-navy" href="#cta-form" data-cta="strategy-call">Book My Free Strategy Call →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT RESULTS: recent purchases (real data) -->
+<section id="client-results" class="section-light" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">Recent purchases</div>
+      <h2>A sample of recent client purchases</h2>
+      <p>Purchase price, current value and growth as shown — sourced directly from SJR's own records for each property.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card"><img src="assets/properties/property-1.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-2.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-3.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-4.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-5.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-6.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-7.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-8.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+      <div class="proof-card"><img src="assets/properties/property-9.webp" alt="Recent SJR client purchase — full details on card" loading="lazy"></div>
+    </div>
+    <p class="proof-note">Past performance is not indicative of future results. Growth figures reflect individual properties over the periods shown and should not be read as a forecast.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag mono">In their words</div>
+      <h2>Client testimonials</h2>
+      <p>The cards below are placeholder structure only — replace client type, property, purchase, strategy, result and quote with verified client data before publishing.</p>
+    </div>
+    <div class="result-grid">
+      <div class="result-card">
+        <span class="placeholder-flag">Placeholder — replace with verified data</span>
+        <div class="fields">
+          <span><b>Client type</b>[Client type]</span>
+          <span><b>Property</b>[Suburb, State]</span>
+          <span><b>Purchase</b>$[XXX,XXX]</span>
+          <span><b>Strategy</b>[First property / portfolio expansion]</span>
+        </div>
+        <p class="quote">"I thought I needed to wait another two years before investing. SJR helped me understand what was actually possible and gave me a clear path forward."</p>
+        <div class="who">— [Client name], [Occupation, if approved]</div>
+      </div>
+      <div class="result-card">
+        <span class="placeholder-flag">Placeholder — replace with verified data</span>
+        <div class="fields">
+          <span><b>Client type</b>[Client type]</span>
+          <span><b>Property</b>[Suburb, State]</span>
+          <span><b>Purchase</b>$[XXX,XXX]</span>
+          <span><b>Strategy</b>[First property / portfolio expansion]</span>
+        </div>
+        <p class="quote">"I didn't know what I could actually borrow. Turns out it was more than I thought — and now I own a second property."</p>
+        <div class="who">— [Client name], [Occupation, if approved]</div>
+      </div>
+      <div class="result-card">
+        <span class="placeholder-flag">Placeholder — replace with verified data</span>
+        <div class="fields">
+          <span><b>Client type</b>[Client type]</span>
+          <span><b>Property</b>[Suburb, State]</span>
+          <span><b>Purchase</b>$[XXX,XXX]</span>
+          <span><b>Strategy</b>[First property / portfolio expansion]</span>
+        </div>
+        <p class="quote">"No pressure, no upsell. Just a straight answer on what was possible for my situation."</p>
+        <div class="who">— [Client name], [Occupation, if approved]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SJR -->
+<section id="why-sjr" class="section-light">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">Why SJR</div>
+      <h2>Why tradies and FIFO workers work with SJR</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card"><h3>Strategy first</h3><p>We don't start with a property. We start with your position and your goals.</p></div>
+      <div class="why-card"><h3>Tradie &amp; FIFO focus</h3><p>The strategy is built around the realities of rosters, overtime-heavy income and non-standard work patterns.</p></div>
+      <div class="why-card"><h3>Off-market access</h3><p>87% of Mitch's own property purchases have been off-market.</p></div>
+      <div class="why-card"><h3>End-to-end support</h3><p>Strategy, property search, due diligence and acquisition support, in one place.</p></div>
+      <div class="why-card"><h3>Limited client capacity</h3><p>SJR takes on approximately 4 new clients a month, deliberately, so every client gets full attention.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section class="section-light" style="background:var(--paper-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">Fit check</div>
+      <h2>Who SJR works best with</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-col yes">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Tradies and FIFO workers</li>
+          <li>High-income earners looking to convert income into a strategy</li>
+          <li>People buying their first investment property</li>
+          <li>Existing investors looking to build strategically</li>
+          <li>People who want professional guidance rather than doing everything themselves</li>
+        </ul>
+      </div>
+      <div class="who-col no">
+        <h3>Who this probably isn't for</h3>
+        <ul>
+          <li>People looking for a get-rich-quick scheme</li>
+          <li>People unwilling to take a long-term approach</li>
+          <li>People expecting guaranteed capital growth</li>
+          <li>People who just want someone to name the next boom suburb</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+  <div class="wrap guarantee-inner">
+    <div>
+      <h2>You're not taking the same risk we are. If we don't find you a suitable investment property within 8 weeks of signing up, your retainer is 100% refundable.</h2>
+      <div class="fine mono">Terms and conditions apply. This guarantee relates to finding a suitable property under the agreed service terms — it does not protect against market performance or investment outcomes.</div>
+    </div>
+    <div class="badge"><b>8 WEEK</b>Guarantee</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-light">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="sheet-tag on-light mono">Before you ask</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">Do I need a large deposit to start investing?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Not necessarily. A lot of clients start using equity in an existing property rather than pure cash savings. The strategy call covers exactly what you've got to work with before any commitment.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">What if I don't know my borrowing capacity?<span class="plus">+</span></button>
+        <div class="faq-a"><p>That's one of the first things covered on the call — you'll get clarity on your position before deciding anything.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">I'm FIFO or self-employed — can SJR work with my situation?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. FIFO rosters, overtime-heavy income and self-employed structures are common among SJR's clients — the strategy is built around your actual income pattern, not a standard assumption.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">What happens during the free strategy call?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Twenty minutes reviewing your financial position, borrowing capacity, and what a realistic first (or next) step could look like. No pitch, no jargon.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">Is the strategy call actually free?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes — no cost, and no obligation to continue afterwards.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">Is this just a sales pitch?<span class="plus">+</span></button>
+        <div class="faq-a"><p>No — the call is about understanding your position, not selling a specific property. If a paid engagement makes sense afterwards, that's explained clearly, with no pressure to decide on the spot.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">How does SJR get paid?<span class="plus">+</span></button>
+        <div class="faq-a"><p class="tbd">[INSERT VERIFIED SJR ANSWER]</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">Do you receive commissions from property sellers?<span class="plus">+</span></button>
+        <div class="faq-a"><p class="tbd">[INSERT VERIFIED SJR ANSWER]</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">What happens if I decide not to buy?<span class="plus">+</span></button>
+        <div class="faq-a"><p class="tbd">[INSERT VERIFIED SJR ANSWER]</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">What happens if you can't find a suitable property?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Covered by the guarantee: if no suitable investment property is found within 8 weeks of signing, your retainer is 100% refundable. Terms and conditions apply.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">How do you use off-market properties?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Off-market opportunities are one channel used when they fit a client's strategy — properties are assessed on whether they fit the plan, not simply because they're off-market.</p></div>
+      </div>
+      <div class="faq-item" data-open="false">
+        <button class="faq-q">What happens after the strategy call?<span class="plus">+</span></button>
+        <div class="faq-a"><p>You'll leave with a clear next step — whether that's moving ahead now or a plan to become investment-ready over the next 6–12 months — plus your copy of SJR's Tradie's Guide to Property Investing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta-form" class="final-cta blueprint-bg">
+  <span class="blueprint-corner tl"></span>
+  <span class="blueprint-corner tr"></span>
+  <span class="blueprint-corner bl"></span>
+  <span class="blueprint-corner br"></span>
+  <div class="wrap cta-grid">
+    <div class="cta-copy reveal">
+      <div class="sheet-tag mono">Book in</div>
+      <h2>Not sure if you're ready to invest? That's exactly what the call is for.</h2>
+      <p>Spend 20 minutes understanding what may be possible for your current position — without committing to anything.</p>
+      <div style="margin-top:28px;">
+        <a class="btn btn-primary" href="#cta-form-widget" data-cta="strategy-call">Book My Free Strategy Call →</a>
+      </div>
+      <div class="microline">No obligation • No pressure • Straight answers</div>
+      <div class="cta-phone-alt">Prefer to talk it through first? Call <a href="tel:0480136875">0480 136 875</a>.</div>
+    </div>
+    <div class="cta-form-card reveal d1" id="cta-form-widget">
+      <span class="kicker-sub mono">100% free · No obligation</span>
+      <div class="kicker">Book your free strategy call</div>
+      <!-- [BOOKING FORM / GHL EMBED GOES HERE] — live GHL form embed below.
+           form_start / form_complete / booking_started / booking_completed:
+           configure via a GHL workflow → webhook (or a postMessage listener,
+           if exposed by LeadConnector's embed script). Not wired here — placeholder only. -->
+      <iframe
+        src="https://api.leadconnectorhq.com/widget/form/NC651HGBUR0PzDDiYlN6"
+        id="inline-NC651HGBUR0PzDDiYlN6"
+        data-layout="{'id':'INLINE'}"
+        data-trigger-type="alwaysShow"
+        data-trigger-value=""
+        data-activation-type="alwaysActivated"
+        data-activation-value=""
+        data-deactivation-type="neverDeactivate"
+        data-deactivation-value=""
+        data-form-name="SJR Strategy Call"
+        data-height="600"
+        data-layout-iframe-id="inline-NC651HGBUR0PzDDiYlN6"
+        data-form-id="NC651HGBUR0PzDDiYlN6"
+        title="SJR Strategy Call"
+        height="600">
+      </iframe>
+    </div>
+  </div>
+</section>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo-white.png" alt="SJR Property Group — Buyers Agency"></div>
+        <p style="max-width:280px;color:var(--concrete);">Helping tradies and FIFO workers build a strategic approach to property investing. Perth, Western Australia.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-sjr">Why SJR</a>
+        <a href="#client-results">Client Results</a>
+        <a href="#faq">FAQs</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:0480136875">0480 136 875</a>
+        <a href="#">[Business address placeholder]</a>
+        <a href="#">[Email address placeholder]</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+    <p class="foot-disclaimer">General information only. Property investment involves risk. Past performance is not indicative of future results. You should obtain independent financial, legal and tax advice relevant to your circumstances before making any investment decision. SJR Property Group does not provide personal financial advice unless separately confirmed and agreed in writing.</p>
+    <div class="foot-bottom">
+      <span>© 2026 SJR Property Group. All rights reserved.</span>
+      <span>ABN [placeholder] · Licence [placeholder, if applicable]</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="mobile-cta-bar">
+  <a href="#cta-form" data-cta="strategy-call-sticky">Book My Free Strategy Call →</a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item = btn.closest('.faq-item');
+      const answer = item.querySelector('.faq-a');
+      const isOpen = item.getAttribute('data-open') === 'true';
+      document.querySelectorAll('.faq-item').forEach(i=>{
+        i.setAttribute('data-open','false');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.setAttribute('data-open','true');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Hero video — lazy-load the real file only on click, never preloaded
+  (function(){
+    const container = document.getElementById('heroVideo');
+    const playBtn = document.getElementById('playVsl');
+    if(!container || !playBtn) return;
+    playBtn.addEventListener('click', () => {
+      const video = document.createElement('video');
+      video.src = 'assets/video/vsl-web.mp4';
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      container.querySelector('img.poster').replaceWith(video);
+      container.classList.add('playing');
+      video.play().catch(()=>{});
+      trackEvent('video_play', { video: 'vsl_hero' });
+    });
+  })();
+
+  // Analytics placeholders — insert real IDs in <head> before launch. Do not ship fake IDs.
+  window.dataLayer = window.dataLayer || [];
+  function trackEvent(name, detail){
+    window.dataLayer.push(Object.assign({ event: name }, detail || {}));
+  }
+  document.querySelectorAll('[data-cta]').forEach(el=>{
+    el.addEventListener('click', () => trackEvent('cta_click', { cta: el.dataset.cta, label: el.textContent.trim() }));
+  });
+</script>
+
+</body>
+</html>
